@@ -1,0 +1,74 @@
+<br>
+<br>
+<form [formGroup]="formData" (ngSubmit) = "onClickSubmit(formData.value)">
+  <div class="form-horizontal">
+    
+    <h4><b>EDIT EMPLOYEE</b></h4>
+        <hr />
+        
+        <div class="form-group">
+            <label class="control-label col-md-2" for="empName">Employee Name</label>
+            <div class="col-md-10">
+                <input class="form-control text-box single-line" data-val="true" data-val-required="Please Enter Employee Name" id="empName"  formControlName="empName" name="empName" type="text" value="" />
+                <span class="field-validation-valid text-danger" data-valmsg-for="empName" data-valmsg-replace="true"></span>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label class="control-label col-md-2" for="designation">Designation</label>
+            <div class="col-md-10">
+                <input class="form-control text-box single-line" data-val="true" data-val-required="Please Enter Designation" id="designation" formControlName="designation" name="designation" type="text" value="" />
+                <span class="field-validation-valid text-danger" data-valmsg-for="designation" data-valmsg-replace="true"></span>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label class="control-label col-md-2" for="contactNo">Contact No</label>
+            <div class="col-md-10">
+                <input class="form-control text-box single-line" data-val="true" data-val-number="The field Contact No must be a number." id="contactNo" formControlName="contactNo" name="contactNo" type="number" value="" />
+                <span class="field-validation-valid text-danger" data-valmsg-for="contactNo" data-valmsg-replace="true"></span>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label class="control-label col-md-2" for="emailId">Email Id</label>
+            <div class="col-md-10">
+                <input class="form-control text-box single-line" data-val="true" data-val-email="Invalid Email Address." data-val-required="Email is required." id="emailId" formControlName="emailId" name="emailId" type="email" value="" />
+                <span class="field-validation-valid error" data-valmsg-for="emailId" data-valmsg-replace="true"></span>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label class="control-label col-md-2" for="skillSet">Skill Set</label>
+            <div class="col-md-10">
+                <input class="form-control text-box single-line" data-val="true" data-val-required="Please Enter SkillSet" id="skillSet" formControlName="skillSet" name="skillSet" type="text" value="" />
+                <span class="field-validation-valid text-danger" data-valmsg-for="skillSet" data-valmsg-replace="true"></span>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label class="control-label col-md-2" for="managerId">Manager</label>
+            <div class="col-md-10">
+                
+                
+                <select data-val="true" data-val-number="The field Manager must be a number." id="managerId" formControlName="managerId" name="managerId"><option value="1">Brincy Babu</option>
+<option value="2">Arya Murugan</option>
+<option value="3">Kavya Sreeram</option>
+<option value="4">Priyanka V S</option>
+</select>
+                <span class="field-validation-valid text-danger" data-valmsg-for="managerId" data-valmsg-replace="true"></span>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="submit" value="Update" class="btn btn-default" />
+            </div>
+        </div>
+    </div>
+</form>
+<div>
+    <a href="/Employee/showemployee">Back to List</a>
+</div>
+
+  

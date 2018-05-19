@@ -1,0 +1,31 @@
+
+<br>
+<br>
+<h1> Employee </h1>
+<br>
+<p><a href="Employee/createemployee"> Create New </a></p>
+<table class="table">
+  <tr>
+    <th>Employee Name</th>
+    <th>Designation</th>
+    <th>Contact No</th>
+    <th>EmailID</th>
+    <th>SkillSets</th>
+    <th>Mnager ID</th>
+  </tr>
+  <tr *ngFor="let emp of employees">
+    <td>{{emp.empName}}</td>
+    <td>{{emp.designation}}</td>
+    <td>{{emp.contactNo}}</td>
+    <td>{{emp.emailId}}</td>
+    <td>{{emp.skillSet}}</td>
+    <td>{{emp.managerId}}</td>
+    <td>
+        <a href="/Employee/editemployee/{{emp.empId}}">Edit</a>
+        <br>
+        <a href="/Employee/viewemployee/{{emp.empId}}"> Details</a>
+        <br>
+        <a href="/Employee/deleteemployee/{{emp.empId}}"> Delete</a>
+      </td>
+  </tr>
+</table>
